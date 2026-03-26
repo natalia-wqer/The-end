@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Jona</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="lily-container"></div>
+
+<!-- Scene 1 -->
+<div class="scene active" id="scene1">
+    <div class="card">
+        <div class="envelope" onclick="goToScene(2)"></div>
+        <h1>For Jona</h1>
+        <p>This might be worth opening.</p>
+    </div>
+</div>
+
+<!-- Scene 2 -->
+<div class="scene" id="scene2">
+    <div class="card">
+        <h1>Before I say anything...</h1>
+        <p id="memoryText"></p>
+        <button onclick="nextMemory()">continue</button>
+    </div>
+</div>
+
+<!-- Scene 3 -->
+<div class="scene" id="scene3">
+    <div class="card">
+        <h1>And then I did this...</h1>
+        <div id="chat" class="chat"></div>
+        <button onclick="goToScene(4)">continue</button>
+    </div>
+</div>
+
+<!-- Scene 4 -->
+<div class="scene" id="scene4">
+    <div class="card">
+        <h1>Okay...</h1>
+        <p id="text"></p>
+        <button onclick="nextStep()">continue</button>
+    </div>
+</div>
+
+<!-- Scene 5 -->
+<div class="scene" id="scene5">
+    <div class="card">
+        <h1>Can I fix it, Jona?</h1>
+
+        <button onclick="forgive()">okay… fine</button>
+        <button class="no" id="noBtn" onmouseover="moveNo()">no</button>
+
+        <p id="final" class="hidden"></p>
+
+        <!-- Bouquet -->
+        <div id="bouquet" class="bouquet hidden">
+            <div class="stem"></div>
+            <div class="flower f1"></div>
+            <div class="flower f2"></div>
+            <div class="flower f3"></div>
+            <div class="flower f4"></div>
+            <div class="flower f5"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
